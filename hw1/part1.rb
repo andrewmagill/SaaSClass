@@ -4,13 +4,17 @@
 
 
 def palindrome?(str)
-  testString = str.upcase.gsub(/[^A-Z]/,'')
-  return testString == testString.reverse
+  test_string = str.upcase.gsub(/[^A-Z]/,'')
+  return test_string == test_string.reverse
 end
 
 def count_words(str)
-  # YOUR CODE HERE
-  return str.split.length
+  #this is crap
+  word_list = str.downcase.gsub(/[^a-z ]/,'').split
+  word_count = {}
+  word_list.each { |word| word_count[word] = 0}
+  word_list.each { |word| word_count[word] += 1}
+  return word_count
 end
 
 
