@@ -4,8 +4,8 @@
 
 
 def palindrome?(str)
-  # YOUR CODE HERE
-  return str == str.reverse
+  testString = str.upcase.gsub(/[^A-Z]/,'')
+  return testString == testString.reverse
 end
 
 def count_words(str)
